@@ -1,5 +1,6 @@
 <?php
 
+use Apps\Shared\Controller\ApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+route::get('/', ApiController::class);
+
+Route::get('/laravel-main', function () {
     return view('welcome');
 });
