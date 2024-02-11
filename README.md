@@ -12,13 +12,13 @@ Before you begin, ensure you have the following installed on your local machine:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/RubenCoDev/FizzBuzzAplication.git
 
     Change into the project directory:
 
     bash
 
-cd <project-directory>
+cd FizzBuzzAplication
 
 Copy the .env.example file and rename it to .env:
 
