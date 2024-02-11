@@ -2,7 +2,7 @@
 
 namespace Apps\FizzBuzz\Controller;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Src\FizzBuzz\Application\UseCase\FizzBuzzUseCase;
 
 class FizzBuzzController extends Controller
