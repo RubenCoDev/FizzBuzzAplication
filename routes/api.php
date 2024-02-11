@@ -1,6 +1,6 @@
 <?php
 
-use Apps\FizzBuzz\Controller\FizzBuzzController;
+use Apps\fizzbuzz\Controller\FizzBuzzController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
