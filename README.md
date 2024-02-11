@@ -13,76 +13,74 @@ Before you begin, ensure you have the following installed on your local machine:
 
    ```bash
    git clone https://github.com/RubenCoDev/FizzBuzzAplication.git
+   
+2. Change into the project directory:
 
-    Change into the project directory:
+    ```bash
 
-    bash
+    cd FizzBuzzAplication
 
-cd FizzBuzzAplication
+3. Copy the .env.example file and rename it to .env:
 
-Copy the .env.example file and rename it to .env:
+    ```bash
 
-bash
+    cp .env.example .env
 
-cp .env.example .env
+4. Install PHP dependencies:
 
-Install PHP dependencies:
+    ```bash
 
-bash
+    docker run --rm -v $(pwd):/app composer install
 
-docker run --rm -v $(pwd):/app composer install
+5. Modify permissions on storage:
 
-Modify permissions on storage:
+    ```bash
 
-bash
+    chmod -R 777 storage
 
-chmod -R 777 storage
+6. Run the Laravel Sail installation command:
 
-Run the Laravel Sail installation command:
+    ```bash
 
-bash
+    ./vendor/bin/sail up -d
 
-./vendor/bin/sail up -d
+7. Generate application key:
 
-Generate application key:
+    ```bash
 
-bash
+    ./vendor/bin/sail artisan key:generate
 
-./vendor/bin/sail artisan key:generate
+## Usage
+- To start the application, run:
 
-Usage
+    ```bash
 
-    To start the application, run:
+    ./vendor/bin/sail up -d
 
-    bash
+- To stop the application, run:
 
-./vendor/bin/sail up -d
-
-To stop the application, run:
-
-bash
+    ```bash
 
     ./vendor/bin/sail down
 
-Accessing the Application
+## Accessing the Application
 
 Once the application is running, you can access it in your web browser at http://localhost.
 
-Accessing Fizz Buzz
+## Accessing Fizz Buzz
 
 Once the application is running, you can access it in your web browser at http://localhost/api/fizzbuzz.
 
-Running Tests
+## Running Tests
 
-To run the application's tests, execute the following command:
+- To run the application's tests, execute the following command:
 
-bash
+    ```bash
 
-./vendor/bin/sail test
+    ./vendor/bin/sail test
 
-Additional Information
+## Additional Information
 
 For more information on Laravel Sail and Docker, refer to the following documentation:
 
-    Laravel Sail Documentation
-    Docker Documentation
+[Laravel Sail Documentation](https://laravel.com/docs/10.x/sail)
